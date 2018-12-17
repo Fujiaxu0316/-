@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.3.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/jdsx.css">
+	<style>
+	html{background: #e3f6f6;}
+	    *{
+	        margin: 0;
+	        padding: 0;
+	    }
+	    #box{
+	        width: 1340px;
+	        height: 310px;
+	        border: 1px solid #102327;
+	        position: relative;
+	        margin:0 auto;
+	        overflow: hidden;
+	        padding-left:5px;
+
+	    }
+	    .ul_list{
+	        width:4068px;
+	        height: 310px;
+	        position: absolute;
+	    }
+	    .li_list{
+	        width: 452px;
+	        height: 310px;
+	        list-style: none;
+	        float: left;
+	    }
+	    .li_list img{
+	        width: 432px;
+	        height: 300px;
+	        margin-top:5px;
+	        margin-left:1px;
+	    }
+	    .odiv_nav{
+	        position: absolute;
+	        top: 395px;
+	        left: 85%;
+	        margin-left: -100px;
+	        z-index:6;
+	    }
+	    .span_list{
+	        width: 10px;
+	        height: 10px;
+	        border: 2px solid #08a2ab;
+	        border-radius:50%;
+	        float: left;
+	        margin-left: 20px;
+	        cursor: pointer;
+	    }
+	    .left_click{
+	        position: absolute;
+	        width: 80px;
+	        height: 80px;
+	        background: rgba(0,0,0,0.5);
+	        font-size:4em;
+	        color: white;
+	        text-align: center;
+	        line-height: 80px;
+	        cursor: pointer;
+	        z-10000;
+	        margin-top:100px;
+	        margin-left:2px;
+	    }
+	    .right_click{
+	        position: absolute;
+	        right: 0px;
+	        width: 80px;
+	        height:80px;
+	        background: rgba(0,0,0,0.5);
+	        font-size:4em;
+	        color: white;
+	        text-align: center;
+	        line-height: 80px;
+	        cursor: pointer;
+	        z-10000;
+	         margin-top:100px;
+	         margin-right:4px;
+
+	    }
+	    .btn_left{
+	        position: absolute;
+	        left: -40px;
+	        width: 40px;
+	        height: 80px;
+	        opacity: 0.5;
+	        z-index: 9999;
+	        box-shadow:40px 0px 150px white;
+	        transition: all 0.2s;
+	    }
+
+	    .btn_right{
+	        position: absolute;
+	        right: -40px;
+	        width: 40px;
+	        height: 80px;
+	        font-size: 4em;
+	        box-shadow:-40px 0px 150px white;
+	        opacity: 0.5;
+	        z-index: 9999;
+	        transition: all 0.2s;
+	    }
+	    #lb{width:1195px;height:46px;background:#fff;margin:0 auto;margin-top:30px;line-height:42px;padding-left:4px;position: relative;}
+	    #lb li{float: left;text-align:center;}
+	    #lb span{display: inline-block;width:61px;height:38px;margin-top:4px;line-height:38px;cursor: pointer;}
+	    #lb span:hover{background:#51b8c0;color:#fff;}
+	    #lb i{display: inline-block;float: right;font-size:12px;color:#098483;cursor: pointer;margin-right:10px;}
+	    #lb u{color:#b9bfbf;}
+	    .fir{width:1195px;height:237px;background:#fff;margin:10px auto;}
+	    .fir li{width:223px;height:237px;margin-left:13px;float: left;position:relative;cursor: pointer;}
+	    .fir li #dw1{width:230px;height:36px;background:url(images/inn.png)0 -283px;position:absolute;top:12px;left:-18px;color:#fff;text-align:center;line-height:36px;}
+	    .fir li #dw2{width:5px;height:36px;background:url(images/inn.png)-113px -104px;position:absolute;top:16px;left:-18px;}
+	    .fir li #dw3{font-size:12px;width:176px;position: absolute;top:68px;left:16px;color:#888;}
+	    .fir li #dw4{font-size:12px;width:176px;position: absolute;top:214px;left:16px;color:#169192;cursor: pointer;}
+	    .fir li #dw6{height:26px;width:223px;background:#0c2a36;color:#fff;position: absolute;bottom:88px;left:0;line-height:26px;padding-left:5px;}
+	    .fir li #dw7{font-size:12px;width:176px;position: absolute;top:159px;color:#888;}
+	    .fir li #dw8{color: #ff6600;font-size:11px;position: absolute;top:200px;}
+	    .fir li img{width:223px;}
+		#tj{width:1195px;height:71px;background: #fff;margin:10px auto;padding-top:21px}
+		#tj p{margin-left:28px;}
+		#tj li{float: left;margin-top:19px;padding-left:28px;font-size:12px;color:#555;cursor: pointer;}
+		#tj li:hover{color: #e87536;}
+</style>
+</head>
+<body>
+<div class="odiv_nav">
+        <span class="span_list"></span>
+        <span class="span_list"></span>
+        <span class="span_list"></span>
+        <span class="span_list"></span>
+        <span class="span_list"></span>
+        <span class="span_list"></span>
+</div>
+		<div id="header">
+		<div class="main">
+			<img src="images/logo.png"/ class="hd1">
+			<ul class="hd3">
+				<li><a href="index.html" class="s1">首页</a></li>
+				<li><a href="#" class="s1">机票</a></li>
+				<li><a href="#" class="s1">酒店</a></li>
+				<li class="hd3_1">
+					<a href="#" class="s1">团购</a>
+					<div class="hd3_11">
+						<ul >
+							<li><a href="#">度假团购</a></li>
+							<li><a href="#">酒店团购</a></li>
+							<li><a href="#">周边团购</a></li>
+							<li><a href="#">长线游</a></li>
+						</ul>
+					</div>
+
+				</li>
+				<li class="hd3_2">
+					<a href="#" class="s1">度假</a>
+					<div class="hd3_21">
+						<ul >
+							<li><a href="#" class="dj">度假首页</a></li>
+							<li><a href="#">海外玩乐</a></li>
+							<li><a href="#">自由行</a></li>
+							<li><a href="#">出境游</a></li>
+							<li><a href="#">特卖</a></li>
+							<li><a href="#">周边游</a></li>
+							<li><a href="#">游轮</a></li>
+							<li><a href="#">签证</a></li>
+							<li class="gw">
+								<a href="#">海外购物<i class="h"></i></a>
+							</li>
+							<li><a href="#">包团·定制</a></li>
+							<li class="bx"><a href="#">旅行保险<i class="d"></i></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="hd3_3">
+					<a href="#" class="s1">门票</a>
+					<div class="hd3_31">
+						<ul >
+							<li><a href="#" class="dj">境内门票</a></li>
+							<li class="yry"><a href="#" >品质一日游<i class="h"></i></a></li>
+							<li><a href="#">玩转海外</a></li>
+							<li><a href="#">港澳台门票</a></li>
+							<li><a href="#">地图找景点</a></li>
+							<li class="lyz"><a href="#">厦门老院子</a><i class="d"></i></li>
+							<li class="lyz"><a href="#">壮美内蒙古</a><i class="d"></i></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#" class="sgz">火车票</a></li>
+				<li class="hd3_4">
+					<a href="#" class="s1">攻略</a>
+					<div class="hd3_41">
+						<ul >
+							<li><a href="#" class="dj">攻略首页</a></li>
+							<li><a href="#" >攻略库</a></li>
+							<li><a href="#">目的地</a></li>
+							<li><a href="#">创建行程</a></li>
+							<li><a href="#">发表游记</a></li>
+							<li><a href="#">骆驼书</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="hd3_5">
+					<a href="#" class="sgz">当地人</a>
+					<div class="hd3_51">
+						<ul >
+							<li><a href="#" class="dj">当地人首页</a></li>
+							<li class="wifi"><a href="#" >出境WIFI<i class="h"></i></a></li>
+							<li><a href="#">旅游包车</a></li>
+							<li><a href="#">一日游</a></li>
+							<li><a href="#">导游讲解</a></li>
+							<li><a href="#">交通卡</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="cc">
+					<a href="#" class="s1">车车</a>
+					<i></i>
+					<div class="hd3_61">
+						<ul >
+							<li><a href="#" class="dj">车车首页</a></li>
+							<li class="gnzc"><a href="#" >国内租车<i class="h"></i></a></li>
+							<li><a href="#">国内接送机</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#" class="sgz">汽车票</a></li>
+				<li><a href="#" class="s1">境外</a></li>
+				<li><a href="#" class="s1">保险</a></li>
+				<li class="hd3_7">
+					<a href="#" class="s1">金融</a>
+					<div class="hd3_71">
+						<ul >
+							<li><a href="#" class="dj">拿去花</a></li>
+							<li><a href="#" >保险商城</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<img src="images/st.png" class="hd5"/>
+			<img src="images/st.png" class="hd6"/>
+			<img src="images/st.png" class="hd7"/>
+			<img src="images/st.png" class="hd8"/>
+			<ul class="hd4">
+				<li class="hd4_1">请 <a href="index2.html">登录 </a>或 <a href="index3.html">免费注册</a></li>
+				<li><a href="#" class="hd4_2">
+						消息<i class="tp"></i><i class="tp1"></i>
+					</a></li>
+				<li class="chuxian"><a href="#" class="hd4_3">查看订单<i class="tp1"></i></a>
+					<ul class="xiala">
+							<li><a href="#">机票订单</a></li>
+							<li><a href="#">酒店订单</a></li>
+							<li><a href="#">公寓订单</a></li>
+							<li><a href="#">团购订单</a></li>
+							<li><a href="#">度假订单</a></li>
+							<li><a href="#">门票订单</a></li>
+							<li><a href="#">火车票订单</a></li>
+							<li><a href="#">汽车票订单</a></li>
+							<li><a href="#">车车订单</a></li>
+							<li><a href="#">Q商城订单</a></li>
+							<li><a href="#">当地人订单</a></li>
+							<li><a href="#">金融订单</a></li>
+							<li><a href="#">礼品卡订单</a></li>
+					</ul>
+
+				</li>
+				<li><a href="#" class="hd4_4">积分商城</a></li>
+				<li><a href="#" class="hd4_5">联系客服</a></li>
+			</ul>
+			<img src="images/dijia2.gif"/ class="hd2">
+		</div>
+	</div>
+	<div id="banner">
+		<div class="main">
+			<ul>
+				<li id="jdss1">酒店搜索</li>
+				<li id="kzms1">客栈民宿</li>
+				<li id="jwjd1">境外酒店</li>
+				<li id="jdtg1">酒店团购</li>
+				<li id="gdjd1">高端酒店</li>
+			</ul>
+			<div id="ld"><i class="ld"></i></div>
+			<div id="sc">积分商城</div>
+			<div id="dp"><i class="dp"></i><span>社区点评</span></div>
+		</div>
+	</div>
+	<div id="box">
+    <ul class="ul_list">
+        <li class="li_list"><img src="images/lb1.jpg" title="邂逅浪漫岛屿" alt=""/></li>
+        <li class="li_list"><img src="images/lb2.jpg" title="来厦门，住精选客栈" alt=""/></li>
+        <li class="li_list"><img src="images/lb3.jpg" title="人文山水,“享”你所想"alt=""/></li>
+        <li class="li_list"><img src="images/lb4.jpg" title="更多丽江优质客栈" alt=""/></li>
+        <li class="li_list"><img src="images/lb5.jpg" title="慷慨燕赵地，浪漫北戴河" alt=""/></li>
+        <li class="li_list"><img src="images/lb6.jpg" title="一见倾心，醉美大理" alt=""/></li>
+        <li class="li_list"><img src="images/lb1.jpg" title="邂逅浪漫岛屿" alt=""/></li>
+        <li class="li_list"><img src="images/lb2.jpg" title="来厦门，住精选客栈" alt=""/></li>
+        <li class="li_list"><img src="images/lb3.jpg" title="人文山水,“享”你所想" alt=""/></li>
+    </ul>
+    
+    <div class="left_click"><</div>
+    <div class="right_click">></div>
+    <div class="btn_left"></div>
+    <div class="btn_right"></div>
+</div>
+<ul id="lb"></ul>
+<ul class="fir" id="fir"></ul>
+<ul class="fir" id="sce"></ul>
+<ul class="fir" id="thr"></ul>
+<ul class="fir" id="fou"></ul>
+<ul id="tj"></ul>
+<div id="footer">
+<div class="main">
+	<div class="dyp">关于Qunar.com<i></i>
+		<ul class="cx">
+			<li>联系我们</li>
+			<li>用户协议</li>
+			<li>常见问题</li>
+			<li>友情链接</li>
+		</ul>
+		</div> <span>|</span> <a>酒店分销商加盟</a> <span>|</span> <a>业务合作</a> <span>|</span> <a>加入我们</a> <span>|</span>
+		<a>"严重违规失信"专项整治举报</a> <span>|</span> <a>安全中心</a> <span>|</span> <a>星骆驼公益</a> <span>|</span> <a>About Us</a>
+		<p>Copyright ©2018 Qunar.com 京公网安备110108901530 京ICP备05021087号 营业执照信息 保险经纪资质 (京)-非经营性-2016-0110 <i></i> 去哪儿网客服电话95117</p>
+		<p class="p2">违法和不良信息举报电话：010-69194277违法和不良信息举报邮箱：jubao@qunar.com</p>
+		<ul class="tp">
+			<li class="li1"></li>
+			<li class="li2"></li>
+			<li class="li3"></li>
+			<li class="li4"></li>
+			<li class="li5"></li>
+		</ul>
+	</div>
+	</div>
+<script src="js/kzms.js"></script>
+</body>
+</html>

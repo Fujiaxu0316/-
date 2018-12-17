@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.magnify {
+	z-index: 20;
+	border: 1px solid #999;
+	position: fixed;top:25px;right:5px;
+	width:300px;
+  	height:583px;
+	margin:0px auto;
+	overflow: hidden;
+	float: right;
+	display:none;
+}
+
+.magnify img {
+	display:block;
+}
+
+.element_to_magnify {
+	position: relative;
+	width:300px;
+  	height:583px;
+  	overflow: hidden;
+}
+.element_to_magnify a {
+  display:block;
+  position:absolute;
+  top:80px;
+  right:80px;
+  background-color:rgba(200, 200, 200, .25);
+  padding:4px;
+  font-size:18px;
+  color:#fff;
+}
+.element_to_magnify img{
+	width: 100%;
+	height: auto;
+}
+.magnify_glass {
+
+	z-index: 400;
+	position: absolute;
+	border: 1px solid #CCC;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	overflow:hidden;
+}
+.magnify_glass .aa{position: absolute;top:50%;left:50%;
+					font-size:30px;
+					color:#999;
+					margin-top:-15px;
+					margin-left:-15px;}

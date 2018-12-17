@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style>
+	body{position: relative;}
+		#head{height:28px;background:#1badb6;}
+		#head li{height:28px;;line-height:28px;padding-left:7px;padding-right:8px;float: left;font-size:12px;color:#fff;cursor:pointer;}
+		#head .first{background:url(images/xlt.png);width:167px;height:28px;}
+		#head div{float: right;padding-left:7px;padding-right:8px;cursor:pointer;color:#fff;}
+		#head a{float: right;padding-left:7px;padding-right:8px;cursor:pointer;color:#fff;}
+
+		#left{width:299px;min-height:633px;background:#fff;float: left;position:fixed;}
+		#left .yx{width:259px;height:39px;margin:20px 0 0 20px;line-height:39px;border-bottom:1px solid #d8d8d8;}
+		#pp{width:5px;min-height:633px;background:url(images/pp.png);float: left;position:fixed;top:28px;left:299px;}
+		#left .tj{width:259px;height:466px;margin-left:20px;overflow:auto;}
+		#left #dmtj{width:259px;min-height:49px;padding-top:10px;}
+	    #yctj{width:230px;height:44px;background:#f3f3f3;border:1px solid #ccc;margin-left:6px;margin-bottom:5px;position:relative;}
+	    #yctj1{width:230px;height:44px;background:#f3f3f3;border:1px solid #ccc;margin-left:6px;margin-bottom:5px;position:relative;text-align:center;line-height:44px;font-size:14px;color:#999;}
+
+	    #yctj #nr{position:absolute;top:15px;left:39px;width:97px;height:14px;display: inline-block;font-size:13px;line-height:14px;}
+		#yctj #tb{display:inline-block;width:15px;height:12px;background:url(images/plan.gif) -1px -353px;position: absolute;top:15px;left:12px;}
+		#yctj #jianh{width:16px;height:16px;display:inline-block;position:absolute;top:15px;left:145px;text-align:center;line-height:16px;background:#d8d8d8;color:#fff;font-weight:bold;cursor: pointer;}
+		#yctj #jiah{width:16px;height:16px;display:inline-block;position:absolute;top:15px;left:215px;text-align:center;line-height:16px;background:#d8d8d8;color:#fff;font-weight:bold;cursor: pointer;}
+		#yctj #ts{width:50px;height:16px;display:inline-block;position:absolute;top:15px;left:163px;text-align:center;line-height:16px;background:#999;color:#666;font-size:12px;}
+		#yctj #chahao{display:inline-block;width:14px;height:14px;background:url(images/plan.gif)0 -303px;position:absolute;top:-5px;left:217px;cursor: pointer;display:none;}
+		#yctj:hover #chahao{display:block;}
+		#left #sdtj{width:185px;height:47px;background:#f8f9f9;margin-left:0;padding-top:25px;padding-left:74px;}
+		#left .bj{width:213px;height:88px;padding-top:20px;padding-left:86px;border-top:1px solid #e6e6e6;}
+		#left #sdtj #jiahao{width:103px;height:15px;cursor: pointer;}
+		#left #sdtj #jiahao i{width:13px;height:16px;background:url(images/plan.gif);float: left;}
+		#left #sdtj #jiahao u{float:left;font-size:12px;color:#1badb6;width:83px;height:16px;line-height: 16px;}
+		#bjxc{width:128px;height:40px;background:#ccc;border-radius:5px;cursor: pointer;text-align:center;line-height:40px;color:#fff;font-size:14px;}
+		#qiehuan{height:44px;background:#f8f9f9;margin-left:304px;padding-top:3px;}
+		#qiehuan li{float: left;font-size:17px;padding-left:20px;padding-right:20px;height:44px;line-height:44px;cursor: pointer;}
+		#nrqh{min-height:587px;margin-left:304px; }
+		#nrqh li{float: left;width:233px;height: 155px;padding:20px;position: relative;padding-top:0;}
+		#nrqh li img{width:233px;height: 155px;}
+		#nrqh li span{position: absolute;top:130px;left:35px;color:#fff;font-weight:bold;}
+		#nrqh li i{width:102px;height:35px;position: absolute;top:60px;left:70px;background:url(images/plan.gif)0 -105px;display:none;cursor:pointer;}
+		#nrqh li u{width:233px;height:155px;position: absolute;top:0px;left:20px;background:rgba(0,0,0,0.5);display:none;}
+		#nrqh li:hover u{display: block;}
+		#nrqh li:hover i{display:block;}
+		#dmqh{height:70px;margin-left:304px;display:none;}
+		#dmqh li{padding:5px 10px 0 10px;cursor:pointer;float: left;font-size:14px;}
+		#dmqh li:hover{color:#f9af3b}
+		#yz{position:absolute;top:0;left:20px;transition:2s;}
+		#csss{width:338px;height:32px;border:1px solid #ddd;position: absolute;top:35px;left:900px;}
+		#csan{width:35px;height:32px;background:url(images/csss.png);border:1px solid #ddd;position:absolute;top:35px;left:1240px;cursor:pointer;}
+		.sout{width:80%; height:20px;line-height:20px; }
+		.sout:hover{background:#999;}
+		a{color:#000;}
+		#box{width:400px;height:200px;position:absolute;top:70px;left:900px; border:2px solid #f5f5f5;overflow:auto;background:#fff;z-index:3;display:none;}
+	</style>
+</head>
+<body>
+<div id="head">
+	<ul>
+		<li class="first"></li>
+		<li id="shouye">首页</li>
+		<li>机票</li>
+		<li>酒店</li>
+		<li>团购</li>
+		<li>度假</li>
+		<li>门票</li>
+		<li>火车票</li>
+		<li>攻略</li>
+		<li>公寓</li>
+		<li>当地人</li>
+		<li>车车</li>
+		<li>骆驼书</li>
+		<li>客户端</li>
+	</ul>
+	<div ><a href="index2.html">登录</a></div>
+	<div>|</div> 
+	<div ><a href="index3.html">注册</a></div>
+</div>
+<div id="left">
+	<p class="yx">已选目的地</p>
+	<div class="tj">
+		<ul id="dmtj">
+			<li id="yctj1">从右侧添加你想去的城市</li>
+		</ul>
+		<p id="sdtj"><span id="jiahao"><i></i><u>手动添加城市</u></span></p>
+	</div>
+	<div class="bj">
+		<div id="bjxc">开始编辑行程</div>
+	</div>
+</div>
+<div id="pp"></div>
+<div id="qiehuan">
+	<ul>
+		<li id="cnxh">猜你喜欢</li>
+		<li id="gn">国内</li>
+		<li id="gat">国际·港澳台</li>
+		<form action="">
+			<input type="text" id="csss" placeholder="所搜你想去的城市">
+		</form>
+		<ul id="box"></ul>
+		<div id="csan"></div>
+	</ul>
+</div>
+<ul id="dmqh"></ul>
+<ul id="nrqh">
+	
+</ul>
+
+
+<script src="js/cjxc.js"></script>
+</body>
+</html>
+

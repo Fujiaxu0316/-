@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+   #dlk{height:755px;width:100%;background:#fff;}
+    #dlk .main{height:755px;width:1004px;margin:0 auto;}
+	#header1{height:27px;width:100%;background:#fff;position:relative;border-bottom:1px solid #ddd;}
+	#header1 .sst{position: absolute;top:8px;left:819px;}
+	#header1 .sst1{position: absolute;top:8px;left:912px;}
+	#header1 p{width:24px;height:12px;float: left;font-size:12px;margin-top:5px;cursor:pointer;}
+	#header1 .dl1{position: absolute;top: 0px;left:754px;}
+	#header1 .zc1{position: absolute;top: 0px;left:784px;}
+	#header1 a{position: absolute;top: 5px;left:830px;width:72px; height:12px;font-size:12px;color:#ff7c00;}
+	#header1 .lxkf{position: absolute;top: 0px;left:920px;width:48px;height:12px;font-size:12px;}
+	#dlk .main .dl2 .nr{height:455px;width:1004px;position: relative;}
+	#dlk .main .dl2{height:727px;width:1004px;background:#fff;}
+	#dlk .main .zc2{height:727px;width:1004px;background:#fff;display:none;}
+	#dlk .main .dl2 .luotuo{height:103px;background:#fff; width:1004px;position: relative;border-bottom:1px solid #ddd;}
+	#dlk .main .dl2 .luotuo i{display:block;width:128px;height:50px;background:url(images/header_new_v7.png); position: absolute;top:21px;left: 11px;}
+	#dlk .main .dl2 .luotuo p{height:16px;width:72px;float: left;margin:56px 0 0 171px;}
+
+	#footer{height:156px;background:#fff;padding-top:23px;}
+	#footer .dyp{font-size:12px; width:108px;height:16px;margin-left:151px;position: relative;border:1px solid transparent;display:inline-block;color:#666;}
+	#footer .dyp i{display:inline-block;width:7px;height:4px;margin-left:9px; background:url(images/arc.png)no-repeat 0 -6px}
+	#footer .dyp:hover{border:1px solid #eee;color:#ff9e5e;}
+	#footer .dyp:hover .cx{display:block;}
+	#footer .dyp:hover i{background:url(images/arc.png)no-repeat}
+	#footer .dyp .cx{width:108px;height:80px;position: absolute;top:-80px;left:0;border:1px solid #eee;background:#fff;display:none;}
+	#footer .dyp .cx li{height:20px;cursor:pointer;}
+	#footer .dyp .cx li:hover{background:#666;}
+	#footer a{font-size:12px;color:#666;cursor:pointer;}
+	#footer span{font-size:12px;color:#666;}
+	#footer a:hover{color:#ff9e5e;}
+	#footer p{font-size:12px;margin-left:45px;color:#666;margin-top:20px;}
+	#footer p i{display:inline-block;width:16px;height:15px;background:url(images/24.png);}
+	#footer .p2{margin-left:250px;}
+	#footer .tp{margin-left:300px;margin-top:20px;}
+	#footer .tp li{height:28px;border:1px solid #999;margin-right:10px;cursor:pointer;}
+	#footer .li1{float: left;width:58px;background:url(images/dyg.gif);}
+	#footer .li2{float: left;width:47px;background:url(images/f2.png);}
+	#footer .li3{float: left;width:89px;background:url(images/f3.png);}
+	#footer .li4{float: left;width:76px;background:url(images/f4.png);}
+	#footer .li5{float: left;width:88px;background:url(images/f5.png);}
+
+	#zcl{width:511px;height:425px;padding-top:30px;position: relative;float: left;}
+	#zcl span{margin-left:50px;}
+	.bd{width:254px;height:34px;margin-top:20px;margin-left:10px;}
+	.yzm{width:107px;height:34px;margin-top:20px;margin-left:24px;}
+	#cyzm{width:94px;height:34px;margin-left:10px;display:inline-block;border:1px solid #999;position: absolute;top:225px;left:240px;text-align:center;line-height:34px;}
+	#hyh{position:absolute;top:232px;left:300px;font-size:12px;color:#666;cursor:pointer;}
+	#jhm{width:94px;height:34px;position:absolute;top:283px;left:251px;font-size:12px;color:#fff;cursor:pointer;background:#0b60f0;text-align:center;line-height:34px;border-radius:5px;}
+	#miaoshu{width:94px;height:34px;position:absolute;top:283px;left:251px;font-size:12px;color:#fff;cursor:pointer;background:#0b60f0;text-align:center;line-height:34px;border-radius:5px;display:none;}
+	#dg{border:1px solid #ccc;width:13px;height:13px;border-radius:3px;display:inline-block;margin-top:2px;position:absolute;top:350px;left:100px; float: left;}
+	 #dh1{font-size:12px;position: absolute;top:0;left:2px;cursor:pointer;margin:0}
+	#dl{font-size:12px;position:absolute;top:351px;left:79px;}
+	em{font-size:12px;color:#006bc8;cursor: pointer;}
+	#tyzc{width:116px;height:30px;background:#ff8200;text-align:center;line-height:30px;border:none;position: absolute;top:395px;left:100px;border-radius:5px;cursor:pointer;}
+	u{position: absolute;top:400px;left:230px;color:#006bc8;cursor:pointer; }
+	#yb{width:334px;height:395px;float: right;padding-left:134px;padding-top:60px}
+	#yb li{font-size:12px;margin-top:17px;width:282px;}
+	#ftp{width:320px;height: 170px;background:url(images/ftp.png);margin-top:17px;cursor: pointer;}
+	#djxl{width:7px;height:4px;background:url(images/xjt.png);position: absolute;top:67px;left:370px;cursor:pointer;}
+	#xzgj{width:500px;height:179px;background:#fff;position: absolute;top:21px;left:-240px;z-index:3;border:1px solid #ddd;}
+	#remen{width:500px;height:33px;border-bottom:1px solid #ddd;line-height:33px;}
+	#remen .rm{padding-left:8px;float: left;font-size:10px;color:#666;}
+	#remen .rm:hover{color:#338fff;}
+	#guojia{width:485px;height:130px;background:#fff;padding-left:15px;padding-top:15px;}
+	#guojia .gj{width:114px;height:25px;float: left;font-size:14px;}
+	#guojia .gj:hover{background:#338fff;}
+	#jianhao{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:118px;left:400px;background:url(images/jianhao.png)no-repeat;padding-left:20px;display:none;}
+	#jianhao1{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:118px;left:400px;display:none;}
+	#jianhao2{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:118px;left:400px;display:none;}
+	#jianhao3{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:177px;left:400px;background:url(images/jianhao.png)no-repeat;padding-left:20px;display:none;}
+	#jianhao4{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:177px;left:400px;display:none;}
+	#jianhao5{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:234px;left:400px;background:url(images/jianhao.png)no-repeat;padding-left:20px;display:none;}
+	#jianhao6{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:234px;left:400px;display:none;}
+	#jianhao7{width:170px;height:16px;font-size:12px;color:#f39316;position: absolute;top:234px;left:400px;display:none;}
+	</style>
+</head>
+<body>
+	<div id="dlk">
+		<div class="main">
+			<div id="header1">
+				<p class="dl1" id="dl">登录</p>
+				<p class="zc1" id="zc">注册</p>
+				<a href="index.html">去哪儿网首页</a>
+				<p class="lxkf">联系客服</p>
+				<img src="images/ssg.png" class="sst" />
+				<img src="images/ssg.png" class="sst1" />
+			</div>
+			<div class="dl2" id="yhdl">
+				<div class="luotuo">
+					<i></i>
+					<p>账号登录</p>	
+				</div>
+
+				<div class="nr">
+				<span id="jianhao">请输入手机号</span>
+				<span id="jianhao1">x 手机号错误</span>
+				<span id="jianhao2">√</span>
+				<span id="jianhao3">请输入密码</span>
+				<span id="jianhao4">√</span>
+				<span id="jianhao5">请输入验证码</span>
+				<span id="jianhao6">x 验证码错误</span>
+				<span id="jianhao7">√</span>
+				<form action="" id="zcl">
+					<div id="djxl">
+						<div id="xzgj" style="display: none;">
+							<ul id="remen"></ul>
+							<ul id="guojia"></ul>
+						</div>
+					</div>
+					<span>国家/地区</span><input type="text" placeholder="中国 86" class="bd" id="jsgj"><br/>
+					<span>手机号码</span> <input type="text" placeholder="请输入手机号码" class="bd" id="srsjh"><br/>
+					<span>登录密码</span> <input type="password" placeholder="请输入登录密码" class="bd" id="srmm"><br/>
+					<span>验证码</span> <input type="text" placeholder="请输入验证码" class="yzm" id="sryzm">
+					<div id="cyzm"></div><span id="hyh">换一换</span><br/>
+					<span>激活码</span> <input type="text" placeholder="请输入激活码" class="yzm" >
+					<div id="jhm">获取激活码</div><div id="miaoshu"></div>
+					<div id="dg"><i id="dh1">√</i></div><span id="dl">我已阅读并同意遵守 <em>《去哪儿用户服务协议》</em></span>
+					<input type="button" value="同意协议并注册" id="tyzc"><u>邮箱注册</u>
+				</form>
+				<div id="yb">
+					<p>注册成为“去哪儿”的用户后，您可以：</p>
+					<ul>
+						<li>· 畅游与去哪儿合作的机票、酒店、度假代理商网站，轻松管理订单</li>
+						<li>· 查询、计划、管理您的预订信息</li>
+						<li>· 查询、计划、管理您的预订信息</li>
+					</ul>
+					<div id="ftp"></div>
+				</div>
+					
+					</div>
+
+				
+				<div id="footer">
+					<div class="dyp">关于Qunar.com<i></i>
+						<ul class="cx">
+							<li>联系我们</li>
+							<li>用户协议</li>
+							<li>常见问题</li>
+							<li>友情链接</li>
+						</ul>
+					</div> <span>|</span> <a>酒店分销商加盟</a> <span>|</span> <a>业务合作</a> <span>|</span> <a>加入我们</a> <span>|</span>
+					<a>"严重违规失信"专项整治举报</a> <span>|</span> <a>安全中心</a> <span>|</span> <a>星骆驼公益</a> <span>|</span> <a>About Us</a>
+					<p>Copyright ©2018 Qunar.com 京公网安备110108901530 京ICP备05021087号 营业执照信息 保险经纪资质 (京)-非经营性-2016-0110 <i></i> 去哪儿网客服电话95117</p>
+					<p class="p2">违法和不良信息举报电话：010-69194277违法和不良信息举报邮箱：jubao@qunar.com</p>
+					<ul class="tp">
+						<li class="li1"></li>
+						<li class="li2"></li>
+						<li class="li3"></li>
+						<li class="li4"></li>
+						<li class="li5"></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			</div>
+	
+	<script src="js/index3.js"></script>
+</body>
+</html>

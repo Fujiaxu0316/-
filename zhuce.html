@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+    #dlk{height:755px;width:100%;background:#fff;}
+    #dlk .main{height:755px;width:1004px;margin:0 auto;}
+	#header1{height:27px;width:100%;background:#fff;position:relative;border-bottom:1px solid #ddd;}
+	#header1 .sst{position: absolute;top:8px;left:819px;}
+	#header1 .sst1{position: absolute;top:8px;left:912px;}
+	#header1 p{width:24px;height:12px;float: left;font-size:12px;margin-top:5px;cursor:pointer;}
+	#header1 .dl1{position: absolute;top: 0px;left:754px;}
+	#header1 .zc1{position: absolute;top: 0px;left:784px;}
+	#header1 a{position: absolute;top: 5px;left:830px;width:72px; height:12px;font-size:12px;color:#ff7c00;}
+	#header1 .lxkf{position: absolute;top: 0px;left:920px;width:48px;height:12px;font-size:12px;}
+	#dlk .main .dl2{height:727px;width:1004px;background:#fff;}
+	#dlk .main .zc2{height:727px;width:1004px;background:#fff;display:none;}
+	#dlk .main .dl2 .luotuo{height:103px;background:#fff; width:1004px;position: relative;border-bottom:1px solid #ddd;}
+	#dlk .main .dl2 .luotuo i{display:block;width:128px;height:50px;background:url(images/header_new_v7.png); position: absolute;top:21px;left: 11px;}
+	#dlk .main .dl2 .luotuo p{height:16px;width:72px;float: left;margin:56px 0 0 171px;}
+	#dlk .main .dl2 .nr{height:442px;width:1004px;position: relative;}
+	#dlk .main .dl2 .nr .aasj{display:block;width:144px;height:177px;background:url(images/aasj.png);position:absolute;top:31px;left:60px;}
+	#dlk .main .dl2 .nr .qqq{display:block;width:440px;height:130px;position:absolute;top:225px;left:40px;}
+	#dlk .main .dl2 .nr .wza{display:block;width:245px;height:130px;position:absolute;top:61px;left:248px;}
+	#dlk .main .dl2 .nr .wza .lanse{font-size:18px;color: #009bba;margin-bottom:12px;}
+	#dlk .main .dl2 .nr .wza .huise{font-size:12px;color: #999;height:22px;list-style:22px;}
+	#dlk .main .dl2 .nr .dlgn{width:378px;height:440px;background:#f6f6f6;float: right;border:1px solid #ddd;position:relative;}
+	#dlk .main .dl2 .nr .sjdl{width:17px;height:100px;background:url(images/xsj.png)no-repeat 5px 10px;float: right;border-left:1px solid #ddd;border-bottom:1px solid #ddd;font-size:12px;padding:31px 0 0 5px;color: #9b9b9b;}
+	#dlk .main .dl2 .nr i{display:block;width:44px;height:44px;background:url(images/poi.png)0px 0px;position:absolute;top:0;right:24px;cursor:pointer;}
+	#dlk .main .dl2 .nr .bd{width:303px;height:286px;background:#f6f6f6;position:absolute;top:69px;right:24px;border-bottom:1px solid #ebebeb;}
+#bbdd{display:none;}
+	#xz{width:303px;height:27px;position:absolute;top:42px;left:51px;}
+	#dlk .main .dl2 .nr .bd .ll{font-size:14px;}
+	input{margin-bottom:20px;}
+	#dlk .main .dl2 .nr .bd .dx{margin-left:40px;margin-bottom:20px;}
+	.srk1{width:247px;height:28px;border:1px solid #ccc;}
+	#yzm{width:145;height:28px;border:1px solid #ccc;}
+	#cyzm{width:53px;height:28px;border:1px solid #ccc;text-align:center;position:absolute;top:137px;left:194px;line-height: 28px;}
+	#hyh{font-size:12px;margin-left:80px;color:#666;cursor: pointer;}
+	#cyzm1{width:53px;height:28px;border:1px solid #ccc;text-align:center;position:absolute;top:86px;left:194px;line-height: 28px;}
+	#hyh1{font-size:12px;margin-left:80px;color:#666;cursor: pointer;}
+	#dg{border:1px solid #ccc;width:13px;height:13px;border-radius:3px;display:inline-block;margin-top:2px;position: relative;float: left;}
+	#dh{font-size:12px;position: absolute;top:0;left:2px;cursor:pointer;}
+
+	#dg1{border:1px solid #ccc;width:13px;height:13px;border-radius:3px;display:inline-block;position:absolute;top:189px;left:0px;}
+	#dh1{font-size:12px;position: absolute;top:0;left:2px;cursor:pointer;}
+	#dl{font-size:12px;position:absolute;top:188px;left:24px;}
+	#dx{width:60px;height:28px;background:#4151e9;font-size:12px;position:absolute;top:88px;left:189px;cursor: pointer;border-radius:5px;line-height:28px;color:#fff;}
+	#dx1{width:60px;height:28px;background:#4151e9;font-size:12px;position:absolute;top:88px;left:189px;cursor: pointer;border-radius:5px;line-height:28px;color:#fff;display:none;text-align:center;}
+	.bd .a1{position:absolute;top:188px;left:150px;font-size:12px;color:#5a88fe}
+	.bd .a2{position:absolute;top:188px;left:220px;font-size:12px;color:#5a88fe}
+	.bd .sg{position:absolute;top:188px;left:208px;font-size:12px;color:#5a88fe}
+	.bd .srk{margin-top:37px;}
+	#dlan{width:247px;height:28px;background:#ff7c00;border: none;position: absolute;top:232px;left:0;cursor:pointer;}
+	#dlan1{width:247px;height:28px;background:#ff7c00;border: none;position: absolute;top:232px;left:0;cursor:pointer;}
+
+	#dsf{position: absolute;top:400px;left:50px;}
+	#dsf li{float: left;height:16px;padding-left:20px;font-size:12px;line-height:16px;cursor:pointer;margin-right:25px;}
+	#dsf .wx{background:url(images/qqwx.png)no-repeat 0 -60px;width:26px;}
+	#dsf .qq{background:url(images/qqwx.png)no-repeat 0 -147px;width:26px;}
+	#dsf .wb{background:url(images/qqwx.png)no-repeat 0 0px;width:56px;}
+	#dsf .bdlj{background:url(images/qqwx.png)no-repeat 0 -30px;width:26px;}
+	#dlk .main .dl2 .nr .bd1{width:303px;height:317px;background:url(images/11.png)no-repeat center;position:absolute;top:44px;right:24px;border-bottom:1px solid #ebebeb;display:none;}
+	#dlk .main .dl2 .nr .bd1 .p1{font-size:25px;margin-left:50px;margin-bottom:10px;}
+	#dlk .main .dl2 .nr .bd1 .p2{font-size:12px;margin-left:65px;}
+	#dlk .main .dl2 .nr .bd1 .p3{margin-left:70px;margin-top:217px;color:#4ee5fa;}
+	#footer{height:156px;background:#fff;padding-top:23px;}
+	#footer .dyp{font-size:12px; width:108px;height:16px;margin-left:151px;position: relative;border:1px solid transparent;display:inline-block;color:#666;}
+	#footer .dyp i{display:inline-block;width:7px;height:4px;margin-left:9px; background:url(images/arc.png)no-repeat 0 -6px}
+	#footer .dyp:hover{border:1px solid #eee;color:#ff9e5e;}
+	#footer .dyp:hover .cx{display:block;}
+	#footer .dyp:hover i{background:url(images/arc.png)no-repeat}
+	#footer .dyp .cx{width:108px;height:80px;position: absolute;top:-80px;left:0;border:1px solid #eee;background:#fff;display:none;}
+	#footer .dyp .cx li{height:20px;cursor:pointer;}
+	#footer .dyp .cx li:hover{background:#666;}
+	#footer a{font-size:12px;color:#666;cursor:pointer;}
+	#footer span{font-size:12px;color:#666;}
+	#footer a:hover{color:#ff9e5e;}
+	#footer p{font-size:12px;margin-left:45px;color:#666;margin-top:20px;}
+	#footer p i{display:inline-block;width:16px;height:15px;background:url(images/24.png);}
+	#footer .p2{margin-left:250px;}
+	#footer .tp{margin-left:300px;margin-top:20px;}
+	#footer .tp li{height:28px;border:1px solid #999;margin-right:10px;cursor:pointer;}
+	#footer .li1{float: left;width:58px;background:url(images/dyg.gif);}
+	#footer .li2{float: left;width:47px;background:url(images/f2.png);}
+	#footer .li3{float: left;width:89px;background:url(images/f3.png);}
+	#footer .li4{float: left;width:76px;background:url(images/f4.png);}
+	#footer .li5{float: left;width:88px;background:url(images/f5.png);}
+	#cx1{width:303px;height:300px; background:yellow}
+	</style>
+</head>
+<body>
+	<div id="dlk">
+		<div class="main">
+			<div id="header1">
+				<p class="dl1" id="dl">登录</p>
+				<p class="zc1" id="zc">注册</p>
+				<a href="index.html">去哪儿网首页</a>
+				<p class="lxkf">联系客服</p>
+				<img src="images/ssg.png" class="sst" />
+				<img src="images/ssg.png" class="sst1" />
+			</div>
+			<div class="dl2" id="yhdl">
+				<div class="luotuo">
+					<i></i>
+					<p>账号登录</p>	
+				</div>
+
+				<div class="nr">
+					<i class="aasj"></i>
+					<i class="qqq" id="ctp"> </i>
+					<div class="wza" id="kehuduan">
+						
+					</div>
+					<div class="dlgn" id="dlgn">
+						<div class="sjdl">国际手机登陆</div>
+						<i id="smewm"></i>
+
+						<div id="xz">
+						<input type="radio" name="xz" checked class="ll" id="zhdl">账号登录
+						<input type="radio" name="xz" class="dx ll" id="yzmdl">短信验证码登录
+						</div>
+							
+						<form action="" class="bd" id="bd">
+							<input type="text" placeholder="手机号/邮箱/用户名" class="srk srk1"  id="zh">
+							<input type="pussword" placeholder="请输入密码" class="srk1" id="mm">
+							<input type="text" placeholder="请输入验证码" id="yzm">
+							<div id="cyzm"></div><span id="hyh">换一换</span>
+							<div id="dg"><span id="dh">√</span></div><span id="dl">三个月内自动登录</span>
+							<a href="index4.html" class="a1">忘记密码</a><span class="sg">|</span>
+							<a href="index3.html" class="a2">立即注册</a>
+							<input type="button" value="登录" id="dlan">
+							
+						</form>
+						
+						<form action="" class="bd" id="bbdd">
+							
+							<input type="text" placeholder="手机号" class="srk srk1">
+							<input type="text" placeholder="请输入验证码" id="yzm">
+							<div id="dx">获取验证码</div><div id="dx1"></div>
+							<div id="dg1"><span id="dh1">√</span></div><span id="dl">三个月内自动登录</span>
+							<a href="index4.html" class="a1">忘记密码</a><span class="sg">|</span>
+							<a href="index3.html" class="a2">立即注册</a>
+							<input type="button" value="登录" id="dlan1">
+						</form>
+						<ul id="dsf">
+							<li class="wx">微信</li>
+							<li class="qq">QQ</li>
+							<li class="wb">新浪微博</li>
+							<li class="bdlj">百度</li>
+						</ul>
+					</div>
+					<div class="bd1" id="bd1">
+						<p class="p1">手机扫码安全登录</p>
+						<p class="p2">去哪儿旅行客户端 | 微信扫一扫</p>
+						<p class="p3">下载去哪儿手机客户端</p>
+					</div>
+
+				</div>
+				<div id="footer">
+					<div class="dyp">关于Qunar.com<i></i>
+						<ul class="cx">
+							<li>联系我们</li>
+							<li>用户协议</li>
+							<li>常见问题</li>
+							<li>友情链接</li>
+						</ul>
+					</div> <span>|</span> <a>酒店分销商加盟</a> <span>|</span> <a>业务合作</a> <span>|</span> <a>加入我们</a> <span>|</span>
+					<a>"严重违规失信"专项整治举报</a> <span>|</span> <a>安全中心</a> <span>|</span> <a>星骆驼公益</a> <span>|</span> <a>About Us</a>
+					<p>Copyright ©2018 Qunar.com 京公网安备110108901530 京ICP备05021087号 营业执照信息 保险经纪资质 (京)-非经营性-2016-0110 <i></i> 去哪儿网客服电话95117</p>
+					<p class="p2">违法和不良信息举报电话：010-69194277违法和不良信息举报邮箱：jubao@qunar.com</p>
+					<ul class="tp">
+						<li class="li1"></li>
+						<li class="li2"></li>
+						<li class="li3"></li>
+						<li class="li4"></li>
+						<li class="li5"></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+		
+     
+	</div>
+	<script src="js/index2.js"></script>
+</body>
+</html>

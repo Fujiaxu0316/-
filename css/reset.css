@@ -1,0 +1,17 @@
+/*css重置样式*/
+*{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;font-size: 16px;}
+ul,li{list-style: none}
+a,u{text-decoration: none;}
+b,strong{font-weight: normal;}
+i,em{font-style: normal;}
+img{border: none;}
+input{outline: none;}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix{zoom:1;}
